@@ -1,16 +1,16 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = function() {
-  console.log('[+] NODE_ENV =', process.env.NODE_ENV);
+  console.log("[+] NODE_ENV =", process.env.NODE_ENV);
 
   switch (process.env.NODE_ENV) {
-    case 'develop':
+    case "develop":
       return {
-        STATIC_PATH: '../im09-2018-11-prj-present-client/build'
+        STATIC_PATH: "../im09-2018-11-prj-present-client/build"
       };
-    case 'product':
+    case "product":
       return {
-        STATIC_PATH: '/client/build'
+        STATIC_PATH: "/build"
       };
     default:
       return {};
